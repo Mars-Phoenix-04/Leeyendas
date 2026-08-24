@@ -6,7 +6,7 @@ public class MovimientoCamara : MonoBehaviour
     public Transform Aseguir;
 
     [Header("Camara")]
-    private new Camera camara;
+    private Camera MainCamara;
     private Vector2 TamanoPlanoCrca;
     public float MAXdistancia;
     private Vector2 angulo = new Vector2(90 * Mathf.Deg2Rad, 0);
@@ -15,15 +15,15 @@ public class MovimientoCamara : MonoBehaviour
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
-        camara = GetComponent<Camera>();
+        MainCamara = GetComponent<Camera>();
 
         CalcularPlanosCerca();
     }
 
     private void CalcularPlanosCerca()
     {
-        float alto = Mathf.Tan(camara.fieldOfView * Mathf.Deg2Rad / 2) * camara.nearClipPlane;
-        float ancho = alto * camara.aspect;
+        float alto = Mathf.Tan(MainCamara.fieldOfView * Mathf.Deg2Rad / 2) * MainCamara.nearClipPlane;
+        float ancho = alto * MainCamara.aspect;
 
         TamanoPlanoCrca = new Vector2(ancho, alto);
     }
@@ -31,7 +31,7 @@ public class MovimientoCamara : MonoBehaviour
     private Vector3[] ObtenerPuntosColisionCamara(Vector3 Direccion)
     {
         Vector3 posicion = Aseguir.position;
-        Vector3 centro = posicion + Direccion * (camara.nearClipPlane + 0.2f);
+        Vector3 centro = posicion + Direccion * (MainCamara.nearClipPlane + 0.2f);
 
         Vector3 derecha = transform.right * TamanoPlanoCrca.x;
         Vector3 arriba = transform.up * TamanoPlanoCrca.y;

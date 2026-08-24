@@ -780,7 +780,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Interactor
   ELInteractor: {fileID: 1968979537}
-  RangoInteraccion: 1
+  RangoInteraccion: 2
   CapaInteractuable:
     serializedVersion: 2
     m_Bits: 64
