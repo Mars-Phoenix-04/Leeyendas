@@ -6,8 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/01 Prototipo/Escena/Prototipo.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/03 Scenes/00_Inicio_Menu.unity
+    guid: 03e0a9bc100bfbd4c89936bd8099db8d
+  - enabled: 1
+    path: Assets/03 Scenes/01_ACT1_DormitorioMarta.unity
+    guid: d9d31cd6a98934445b423b5ab4c74696
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
