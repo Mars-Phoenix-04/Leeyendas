@@ -3,7 +3,102 @@ guid: f2bae7712d41f5f4285c836e9f2d0c39
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cabello
+    second: {fileID: 2100000, guid: d5ec483a669460b4b89947b527938425, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cuerpo
+    second: {fileID: 2100000, guid: f28ccb82fd110084182c93febdaa6729, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dientes
+    second: {fileID: 2100000, guid: 4abd012dea9cfdf419bb48f6de019cb0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Encias
+    second: {fileID: 2100000, guid: 0e77eb6f3afd77743a4d20ec1501b684, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mono
+    second: {fileID: 2100000, guid: e1c7db6e77f04e24dbb3431c0702a17b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ojo
+    second: {fileID: 2100000, guid: 043b5e20d39cb3049b58edfe0a6b325b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pestanas
+    second: {fileID: 2100000, guid: 694da45d2019d0b41bb023acac68ec90, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pupila
+    second: {fileID: 2100000, guid: 3e47d9c1c86eaf14e9adfba8e428fddd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Vestido
+    second: {fileID: 2100000, guid: e117397ad99c0d949bc1a89f8b5d7c86, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Zapatos
+    second: {fileID: 2100000, guid: 4ee016e34930c6244bec406b382dc8f4, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Cabello
+    second: {fileID: 2800000, guid: 13debf41bcb915d409b8486cd8f87918, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Ucupaint Cuerpo Color
+    second: {fileID: 2800000, guid: db38a85fcf536ae40a345125aad6c7cd, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Ucupaint Dientes Color
+    second: {fileID: 2800000, guid: fc072ddcb3b3cc944a07eee8b0273ca9, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Ucupaint Encias Color
+    second: {fileID: 2800000, guid: e919c627bb2d4d04a9ce7eb89c8a68f5, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Ucupaint Mono Color
+    second: {fileID: 2800000, guid: 51ccc446cfd722d4994cfd74022397f5, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Ucupaint Pestanas Color
+    second: {fileID: 2800000, guid: 4eed87eda44b9c34c868f71974df74ed, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Ucupaint Pupila Color
+    second: {fileID: 2800000, guid: 8da69a60c746c164a96c7104b46e75ec, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Ucupaint Vestido Color
+    second: {fileID: 2800000, guid: 618fa34116336f24bbaf688a1c200d76, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Ucupaint Zapatos Color
+    second: {fileID: 2800000, guid: a663d3dfe4797494db6a3747071ca625, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
