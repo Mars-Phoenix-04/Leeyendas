@@ -12,10 +12,12 @@ public class PantallaInventario : MonoBehaviour
 
     [SerializeField] private CasillasInv[] ArregloCasillas = new CasillasInv[ManejadorInventario.NoCasillas];
     private bool InventarioAbierto = false;
-
     void Start(){ CerrarInventario(); }
 
-    void Update(){ if (Input.GetKeyDown(KeyCode.B)) CambioPantallaINV(); }
+    void Update(){
+        if (ManejadorDialogos.Instancia != null && ManejadorDialogos.Instancia.DialogoActivo) return;
+        if (Input.GetKeyDown(KeyCode.B)) CambioPantallaINV(); 
+    }
 
     public void CambioPantallaINV(){
         InventarioAbierto = !InventarioAbierto;
@@ -25,14 +27,10 @@ public class PantallaInventario : MonoBehaviour
     private void CerrarInventario(){
         PantallaInv.SetActive(false);
         Time.timeScale = 1f;
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
     }
     private void AbrirInventario(){
         PantallaInv.SetActive(true);
         Time.timeScale = 0f;
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
         CargarCPC();
     }
 

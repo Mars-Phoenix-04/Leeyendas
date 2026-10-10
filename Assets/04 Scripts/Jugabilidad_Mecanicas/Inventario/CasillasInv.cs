@@ -34,9 +34,7 @@ public class CasillasInv : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
             if (TXTDescClave != null) TXTDescClave.text = clave.descripcion;
             ResetearHover();
         }
-        else {
-            LimpiarCasilla();
-        }
+        else  LimpiarCasilla();
     }
     public void LimpiarCasilla() {
         HoverSINO = false;
@@ -53,10 +51,6 @@ public class CasillasInv : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         if (CasillaDescHover != null) CasillaDescHover.alpha = 0f;
     }
 
-    public void OnPointerEnter(PointerEventData DataEvento){
-        if(ClaveExiste) HoverSINO = true;
-    }
-    public void OnPointerExit(PointerEventData DataEvento){
-        if (ClaveExiste) HoverSINO = false;
-    }
+    public void OnPointerEnter(PointerEventData DataEvento){    if(ClaveExiste) HoverSINO = true;   }
+    public void OnPointerExit(PointerEventData DataEvento){ if (ClaveExiste) HoverSINO = false; }
 }

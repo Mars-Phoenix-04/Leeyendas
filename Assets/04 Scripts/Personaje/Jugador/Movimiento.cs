@@ -4,48 +4,63 @@ using UnityEngine.InputSystem;
 public class Movimiento : MonoBehaviour
 {
     [Header("Jugador")]
-    CharacterController CController;
-    public Animator CAnimator;
-    public Transform camara;
+    private CharacterController CController;
+    [SerializeField] private Animator CAnimator;
+    [SerializeField] private Transform camara;
 
     [Header("Variables del movimiento del Jugador")]
-    float VelocidadCaminar = 15f;
-    float VelocidadAgachado = 5f;
-    float VelocidadRotacion = 15f;
-    float gravedad = -9.8f;
+    [SerializeField] private float VelocidadCaminar;
+    [SerializeField] private float VelocidadAgachado;
+    [SerializeField] private float VelocidadRotacion;
+    [SerializeField] private float gravedad;
 
     [Header("Propiedades y Configs de Agacharse")]
-    private float VelocidadV;
-    private bool Agachado;
+    [SerializeField] private float VelocidadV;
+    [SerializeField] private bool Agachado;
 
-    void Start(){
+    private void Awake(){
+        camara = Camera.main.transform;
         CController = GetComponent<CharacterController>();
-        CAnimator = GetComponentInChildren<Animator>();
+        if(CAnimator == null) CAnimator = GetComponentInChildren<Animator>();
     }
 
-    void Update(){ ControlAgacharse(); ControlMovimiento();}
-
-    void ControlAgacharse (){
+    void Update(){
+        if ((ManejadorDialogos.Instancia != null && ManejadorDialogos.Instancia.DialogoActivo) || (Evento_PuntoInflexion.InstanciaPuntoInflexion != null && Evento_PuntoInflexion.InstanciaPuntoInflexion.EstaActivo)) {
+            AnimacionIdle();
+            return; 
+        }
+        ControlAgacharse(); ControlMovimiento();
+    }
+    private void AnimacionIdle(){
+        if (CAnimator == null) return;
+        CAnimator.SetBool("Caminando", false);
+        CAnimator.SetBool("AgachadoCaminando", false);
+    }
+    private void ControlAgacharse (){
         Agachado = Input.GetKey(KeyCode.LeftControl);
         CAnimator.SetBool("Agachado", Agachado);
     }
-
-    void ControlMovimiento(){
+    private void ControlMovimiento(){
         float IHorizontal = Input.GetAxis("Horizontal");
         float IVertical = Input.GetAxis("Vertical");
-        Vector3 Direccion = new Vector3(IHorizontal, 0f, IVertical);
+
+        //Hacer que solo camine hacia enfrente
+        float IVerticalAtras = Mathf.Max(0f, IVertical);
+
+        Vector3 frente = camara.forward;
+        frente.y = 0;
+        frente.Normalize();
+
+        Vector3 derecha = camara.right;
+        derecha.y = 0;
+        derecha.Normalize();
+
+        Vector3 DireccionDondeVaAIr = (frente * IVerticalAtras + derecha * IHorizontal).normalized;
         Vector3 movimiento = Vector3.zero;
 
-        if (Direccion.sqrMagnitude > 0.004f){
-            Vector3 frente = camara.forward;
-            frente.y = 0;
-            frente.Normalize();
+        if (DireccionDondeVaAIr.sqrMagnitude > 0.004f){
+            DireccionDondeVaAIr.Normalize();
 
-            Vector3 derecha = camara.right;
-            derecha.y = 0;
-            derecha.Normalize();
-
-            Vector3 DireccionDondeVaAIr = (frente * IVertical + derecha * IHorizontal).normalized;
             Quaternion RotacionDondeVaAIR = Quaternion.LookRotation(DireccionDondeVaAIr);
             transform.rotation = Quaternion.Slerp(transform.rotation, RotacionDondeVaAIR, Time.deltaTime * VelocidadRotacion);
 
@@ -55,8 +70,7 @@ public class Movimiento : MonoBehaviour
             CAnimator.SetBool("Caminando", !Agachado);
             CAnimator.SetBool("AgachadoCaminando", Agachado);
         }
-        else
-        {
+        else {
             CAnimator.SetBool("Caminando", false);
             CAnimator.SetBool("AgachadoCaminando", false);
         }

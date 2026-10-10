@@ -4,29 +4,32 @@ using UnityEngine;
 public class TransicionLibro : MonoBehaviour
 {
     [Header("Componentes")]
-    public Animator LAnimator;
+    [SerializeField] private Animator LAnimator;
+    [SerializeField] private CanvasGroup CGAlertaPresionEnter;
+    [SerializeField] private float DuracionDesvanecimiento = 0.8f;
     private string TriggerAnim = "AbrirLibro";
     private bool Abriendo = false;
     private Quaternion rotacionInicial;
 
     [Header("UI Controller")]
-    public UI_Navegacion UI_Nav;
+    [SerializeField] private UI_Navegacion UI_Nav;
 
     [Header("Transform del Libro")]
-    public Transform PosicionSalida;
-    public Transform PosicionMenu;
-    public Transform PosicionUI;
-    public float VelocidadMov;
-    public float VelocidadRot;
+    [SerializeField] private Transform PosicionSalida;
+    [SerializeField] private Transform PosicionMenu;
+    [SerializeField] private Transform PosicionUI;
+    [SerializeField] private float VelocidadMov;
+    [SerializeField] private float VelocidadRot;
 
     [Header("Efectos Libro")]
-    public float MAXrotacionLibro;
-    public float VelocidadRotLibro;
+    [SerializeField] private float MAXrotacionLibro;
+    [SerializeField] private float VelocidadRotLibro;
 
     //Movimiento del libro poseido (INICIO)
     void Start(){
         MusicManager.Instancia.ReproducirMusica("Menu Principal");
         rotacionInicial = transform.rotation;
+        StartCoroutine(TransicionFadeo(CGAlertaPresionEnter, 1f));
     }
     void Update(){
         if (!Abriendo){
@@ -38,6 +41,7 @@ public class TransicionLibro : MonoBehaviour
     public void ComienzoTransicion(){
         if (Abriendo) return;
         Abriendo = true;
+        StartCoroutine(TransicionFadeo(CGAlertaPresionEnter, 0f));
         StartCoroutine(MovimientoLibro());
     }
     
@@ -55,10 +59,7 @@ public class TransicionLibro : MonoBehaviour
             transform.rotation = Quaternion.RotateTowards(transform.rotation, PosicionSalida.rotation, VelocidadRot * 100f * Time.deltaTime);
             transform.position = Vector3.MoveTowards(transform.position, PosicionMenu.position, VelocidadMov * Time.deltaTime);
             //Animación
-            if (LAnimator != null)
-            {
-                LAnimator.SetTrigger(TriggerAnim);
-            }
+            if (LAnimator != null){ LAnimator.SetTrigger(TriggerAnim); }
             yield return null;
         }
         transform.position = PosicionMenu.position;
@@ -68,7 +69,20 @@ public class TransicionLibro : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position, PosicionUI.position, 0.15f * Time.deltaTime);
             yield return null;
         }
-
         UI_Nav.ApareceMenu();
+    }
+
+    private IEnumerator TransicionFadeo(CanvasGroup CanvasG, float ValorAlfa){
+        float FadeoInicial = CanvasG.alpha;
+        float Tiempo = 0f;
+        CanvasG.blocksRaycasts = ValorAlfa > 0f;
+        CanvasG.interactable = ValorAlfa > 0f;
+        while (Tiempo < DuracionDesvanecimiento)
+        {
+            Tiempo += Time.unscaledDeltaTime;
+            CanvasG.alpha = Mathf.Lerp(FadeoInicial, ValorAlfa, Tiempo / DuracionDesvanecimiento);
+            yield return null;
+        }
+        CanvasG.alpha = ValorAlfa;
     }
 }

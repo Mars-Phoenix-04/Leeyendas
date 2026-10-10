@@ -2,6 +2,6 @@ using UnityEngine;
 
 public interface InterfazInteraccion 
 {
-    void InteractuarClave(InteractorDelJugador InteractorJ);
+    void Interactuar(InteractorDelJugador InteractorJ);
     string TextoInteraccionUI();
 }

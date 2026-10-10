@@ -4,22 +4,29 @@ using UnityEngine.UI;
 
 public class HUDInventario : MonoBehaviour
 {
-    [System.Serializable]
-    public struct CasillasInv { public Image iconoImagen; public CanvasGroup CGCasilla; public TextMeshProUGUI ClaveTXT; }
+    [System.Serializable] public struct CasillasInv { public Image iconoImagen; public CanvasGroup CGCasilla; public TextMeshProUGUI ClaveTXT; }
     [SerializeField] private CasillasInv[] ArregloCasillas = new CasillasInv[ManejadorInventario.NoCasillas];
+    private bool EstaSuscrito = false;
 
     private void OnEnable(){
+        Suscribir();
+        /*
         if(ManejadorInventario.Instancia != null)
         ManejadorInventario.Instancia.CambiosEnElInventario += ActualizarHUD;
+        */
     }
     private void OnDisable(){
+        DeSuscribir();
+        /*
         if (ManejadorInventario.Instancia != null) 
         ManejadorInventario.Instancia.CambiosEnElInventario -= ActualizarHUD;
+        */
     }
 
-    void Start(){
-        ActualizarHUD();
-    }
+    void Start(){ Suscribir(); ActualizarHUD();   }
+
+    public void Suscribir() { if (EstaSuscrito || ManejadorInventario.Instancia == null) { return; } ManejadorInventario.Instancia.CambiosEnElInventario += ActualizarHUD; EstaSuscrito = true; }
+    public void DeSuscribir() { if (!EstaSuscrito || ManejadorInventario.Instancia == null) { return; } ManejadorInventario.Instancia.CambiosEnElInventario -= ActualizarHUD; EstaSuscrito = false; }
     public void ActualizarHUD(){
         if (ManejadorInventario.Instancia == null) return;
         Clave_DATA[] claves = ManejadorInventario.Instancia.ObtenerTODASClaves();

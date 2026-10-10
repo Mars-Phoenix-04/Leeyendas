@@ -1,0 +1,435 @@
+fileFormatVersion: 2
+guid: 77ab678213ae03246ac6aba62c79969a
+ModelImporter:
+  serializedVersion: 24200
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_AzulCartel
+    second: {fileID: 2100000, guid: 33bfbfcc484831645846815520d908b9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_AzulOscuro
+    second: {fileID: 2100000, guid: b17605b1fdcf03b4ebf606d173cf58d0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Banqueta
+    second: {fileID: 2100000, guid: afe44ed97b60e0d438ab6f7a54e15aff, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Basura
+    second: {fileID: 2100000, guid: 93ee99346bbeefd469e50fee6ee3c72f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_CabinaTelefonica
+    second: {fileID: 2100000, guid: b1f7d3f77fd9bd949ab9557178fde62e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Calles
+    second: {fileID: 2100000, guid: 7203f6a9ac0717a40aa4b9bc5b17aa20, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_CamionAzul
+    second: {fileID: 2100000, guid: 10f426e315ef6cb48b604cd08a6aba47, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_CerveceriaBardas
+    second: {fileID: 2100000, guid: eae52b78a0f3af742bcbbce958efb98c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_CerveceriaFabrica
+    second: {fileID: 2100000, guid: 200b373afbfb73544ae41873500dbf83, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_CerveceriaMainBuilding
+    second: {fileID: 2100000, guid: 6717bae4ebd2354468df9526d71b2af8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_CerveceriaTechoFabrica
+    second: {fileID: 2100000, guid: 5407ba7dbe2359346b2cac6908a70028, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_CerveceriaTechoMain
+    second: {fileID: 2100000, guid: e35bf430bbaba8b499a6136c0608ef54, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_CerveceriaVentanas
+    second: {fileID: 2100000, guid: 043885687ae39d94188af29ec168cf18, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Crema
+    second: {fileID: 2100000, guid: 54c016c7d0b23be4096b5a753295462f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Dorado
+    second: {fileID: 2100000, guid: 31cc521bb46c1ba4cbeee5db1583f70f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_EdificioVecino
+    second: {fileID: 2100000, guid: 469480b6f7afa544f990524353d8d91c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_EdificiosNegocio
+    second: {fileID: 2100000, guid: 3e71812d2d85e5140b130abecf569674, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_EdificoMarta
+    second: {fileID: 2100000, guid: c13d944c0ec1f0443a8a2a5bacc2afae, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_FordVerde
+    second: {fileID: 2100000, guid: 49d9e5eaefb618f40b95a80fa3709c86, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_GrisCartel
+    second: {fileID: 2100000, guid: c29b7e1fe7e0eb5418686b9959130540, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_LetrasCabina
+    second: {fileID: 2100000, guid: 7a1b64555f306264aaea6c84b41d1ac3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Llantas
+    second: {fileID: 2100000, guid: f7f78f0b44f3e254997d332c4faa18ea, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_LucesCarro
+    second: {fileID: 2100000, guid: 075c31230adde3645a85cb56140a54f6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_LuzPosteDeLuz
+    second: {fileID: 2100000, guid: 27bf6973f45ba5b4db8298131821c4bd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_MarcosVentanales1
+    second: {fileID: 2100000, guid: 8103a4bfc986e5a448ea03756f9f1459, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_MarcosVentanales2
+    second: {fileID: 2100000, guid: d75b11742026941428fab7117eaeff49, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_MetalCerca
+    second: {fileID: 2100000, guid: f4c52c255f4061c479056ef189d3a694, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NeblinaPared
+    second: {fileID: 2100000, guid: 926d9cb245e95354b908f88a861e170d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NeblinaTecho
+    second: {fileID: 2100000, guid: f0f21899ad9059b4aaa3b2af664c0b8d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NegociosVentanas
+    second: {fileID: 2100000, guid: 81e08ba3c2108f84eb630bcea7c4b575, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NegociosVentanasGrandes
+    second: {fileID: 2100000, guid: 8134572dfb550794282a5ac072077e1a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Plata
+    second: {fileID: 2100000, guid: 12566904b504d444b97bae52ccc21ee5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_PosteDeLuz
+    second: {fileID: 2100000, guid: 8b6f64c451ed85c46a24e8a1827859d0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_PuertasCasaMarta
+    second: {fileID: 2100000, guid: ec02e075fa5c13846b3aee5dafb35274, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_PuertasEdificioVecino
+    second: {fileID: 2100000, guid: e470cec3b9bdc454db5930d237f78849, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Rojo
+    second: {fileID: 2100000, guid: e60bf0d29a4740b4c8ef16820f60501c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_RojoCartel
+    second: {fileID: 2100000, guid: 42e877f5722042940b90932f46a6bac7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_SegundoColorCabina
+    second: {fileID: 2100000, guid: 2e1a696f7a059f8408081ba2f8a48d72, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_TelefonoBotones
+    second: {fileID: 2100000, guid: e0daf53683401e349b84025f39260e83, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_TelefonoCabina
+    second: {fileID: 2100000, guid: 673f5d5a378f44f49a5f12722b920753, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Terreno
+    second: {fileID: 2100000, guid: 94506373950e11640a23f40cade21969, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Ventanas
+    second: {fileID: 2100000, guid: 8c8fbc33b9fefe7458828147ccb5df2f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Poster1
+    second: {fileID: 2100000, guid: 208a48fc59b39eb4ba0b5e613da83b65, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Poster2
+    second: {fileID: 2100000, guid: 90c490deeb4c97e49b2bb2fbb715e473, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Poster3
+    second: {fileID: 2100000, guid: 7eb2684c4f7809e4e8402528f3540b08, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Poster4
+    second: {fileID: 2100000, guid: 2693bd2bb33e1c349b349e39c55a6553, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: T_Barda
+    second: {fileID: 2800000, guid: 979866112fcb01246bd11a0011900c1f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: T_Basura
+    second: {fileID: 2800000, guid: 0366a4faf2a2a73418eab6c46a4e89b3, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: T_CabinaTelefonica
+    second: {fileID: 2800000, guid: ac3fa7153122948469c35329ee94769a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: T_CamionAzul
+    second: {fileID: 2800000, guid: 8a20fe4ac339c654c969c045e611fb2e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: T_CerveceriaFabrica
+    second: {fileID: 2800000, guid: 9103a5c49235a514cafa247ae39f2782, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: T_CerveceriaMainBuilding
+    second: {fileID: 2800000, guid: ade243685b7b8bb4b930ae418647c4dd, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: T_EdificioFrente
+    second: {fileID: 2800000, guid: b3ab2ecf637ff5a42901dd64ce1534d0, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: T_EdificioMarta
+    second: {fileID: 2800000, guid: 5c500bd08d44a3c4fa9fe8a543c33672, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: T_EdificioNegocios
+    second: {fileID: 2800000, guid: fa80cb98a2c223847817ab8cf5ebe815, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: T_FordVerde
+    second: {fileID: 2800000, guid: 6fdcb9e05ab6b8245a3dc81e513b5fe4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: T_ParedInvisible
+    second: {fileID: 2800000, guid: fae4c6eed9a04ea4a8b63ef543dae9a5, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: T_PosteDeLuz
+    second: {fileID: 2800000, guid: 81050bab12dfa6642828f7f2d269ea70, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: T_Poster1
+    second: {fileID: 2800000, guid: fe1743a51c4534c4daed8dd8b0f6ec5c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: T_Poster2
+    second: {fileID: 2800000, guid: 80ad612d8218ce347a0f808efa0f0bfe, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: T_Poster3
+    second: {fileID: 2800000, guid: 206fc74228850624189c53276767d2b4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: T_Poster4
+    second: {fileID: 2800000, guid: 777544aa68836ab418af25d74bbe4813, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: T_Suelo
+    second: {fileID: 2800000, guid: fb2db6afc1479484cbf07cf542b5fe2f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: T_TechoInvisible
+    second: {fileID: 2800000, guid: eb376246457d6e742a3778f0c910016b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: T_VentanasGrandesNegocio
+    second: {fileID: 2800000, guid: 604a3182165abe849a9d2c5176dfb6e6, type: 3}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    generateMeshLods: 0
+    meshLodGenerationFlags: 0
+    maximumMeshLod: -1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

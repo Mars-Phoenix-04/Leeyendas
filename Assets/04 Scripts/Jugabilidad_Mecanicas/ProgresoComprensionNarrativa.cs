@@ -21,9 +21,11 @@ public class ProgresoComprensionNarrativa : MonoBehaviour
     public float ComprensionCap => CapComprension;
 
     private void Awake(){
-        if (Instancia == null) Instancia = this;
+        if (Instancia == null) {Instancia = this; DontDestroyOnLoad(gameObject); }
         else if (Instancia != this) Destroy(gameObject);
     }
+
+
     public void ProgresoCapituloCambio(float progreso){
         Caprogreso = Mathf.Clamp(Caprogreso + progreso, 0f, 100f);
         CambioEnProgreso?.Invoke(Caprogreso);
@@ -32,6 +34,10 @@ public class ProgresoComprensionNarrativa : MonoBehaviour
         CapComprension = Mathf.Clamp(CapComprension + comprension, 0f, 100f);
         CambioEnComprension?.Invoke(CapComprension);
     }
+
+    public void CambiarProgreso(float puntos) => ProgresoCapituloCambio(puntos);
+    public void CambiarComprension(float puntos) => ComprensionCapituloCambio(puntos);
+
     public void CapituloEnCurso(int capitulo){
         CapituloActual = capitulo;
         Caprogreso = 0f;
