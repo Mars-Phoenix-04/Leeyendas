@@ -1,0 +1,130 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1332820315886991395
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6822360780466689729}
+  - component: {fileID: 3051884654093226660}
+  m_Layer: 0
+  m_Name: CineManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6822360780466689729
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1332820315886991395}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 614.4776, y: 360.7932, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3051884654093226660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1332820315886991395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bec2dca7e53376a42aee37b5412c59d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Manejador_Cinematicas
+  CAMGameplay: {fileID: 0}
+  PasosCinematicas:
+  - CamaraPaso: {fileID: 0}
+    FinalPaso: 2
+    TiempoEspera: 0
+    CambiarAnimacion: 0
+    NombreParametro: 
+    VAnimacion: 0
+    MoverPersonaje: 1
+    PuntoDestino: {fileID: 0}
+    VelocidadMovimientoPersonaje: 10
+    MostrarDialogo: 0
+    LineasDialogoPaso: []
+  - CamaraPaso: {fileID: 0}
+    FinalPaso: 2
+    TiempoEspera: 0
+    CambiarAnimacion: 0
+    NombreParametro: 
+    VAnimacion: 0
+    MoverPersonaje: 1
+    PuntoDestino: {fileID: 0}
+    VelocidadMovimientoPersonaje: 10
+    MostrarDialogo: 0
+    LineasDialogoPaso: []
+  - CamaraPaso: {fileID: 0}
+    FinalPaso: 1
+    TiempoEspera: 0
+    CambiarAnimacion: 0
+    NombreParametro: 
+    VAnimacion: 0
+    MoverPersonaje: 0
+    PuntoDestino: {fileID: 0}
+    VelocidadMovimientoPersonaje: 0
+    MostrarDialogo: 1
+    LineasDialogoPaso:
+    - TituloPersonaje: Marta
+      TXTLinea: "\xA1No puedo creerlo!"
+    - TituloPersonaje: Marta
+      TXTLinea: 'No entiendo a que le tienen miedo mis padres. '
+    - TituloPersonaje: Marta
+      TXTLinea: "Solo quiero salir a divertirme y ya est\xE1."
+  - CamaraPaso: {fileID: 0}
+    FinalPaso: 1
+    TiempoEspera: 0
+    CambiarAnimacion: 0
+    NombreParametro: 
+    VAnimacion: 0
+    MoverPersonaje: 0
+    PuntoDestino: {fileID: 0}
+    VelocidadMovimientoPersonaje: 0
+    MostrarDialogo: 1
+    LineasDialogoPaso:
+    - TituloPersonaje: Radio
+      TXTLinea: "\xA1Visite el sal\xF3n Mal\xEDbu! El lugar donde la noche cobra
+        vida y la diversi\xF3n comienza."
+    - TituloPersonaje: Marta
+      TXTLinea: "Ash, solo les ped\xED permiso para ir a un sal\xF3n de baile y se
+        pusieron hist\xE9ricos."
+    - TituloPersonaje: Marta
+      TXTLinea: Todo por culpa de un rumor de que el Diablo anda rondando por la
+        noche, eso que.
+  - CamaraPaso: {fileID: 0}
+    FinalPaso: 1
+    TiempoEspera: 0
+    CambiarAnimacion: 0
+    NombreParametro: 
+    VAnimacion: 0
+    MoverPersonaje: 0
+    PuntoDestino: {fileID: 0}
+    VelocidadMovimientoPersonaje: 0
+    MostrarDialogo: 1
+    LineasDialogoPaso:
+    - TituloPersonaje: Marta
+      TXTLinea: "Saldr\xE9 de esta habitaci\xF3n y ni siquiera mis padres me van
+        a poder detener."
+    - TituloPersonaje: Marta
+      TXTLinea: "Solo tengo que encontrar c\xF3mo hacerlo\u2026"
+    - TituloPersonaje: Marta
+      TXTLinea: "Tal vez haya algo aqu\xED que me ayude a salir. "
+  PNegro: {fileID: 0}
+  PHUD: {fileID: 0}
+  DuracionFadeo: 2
+  TransformPersonaje: {fileID: 0}
+  AnimatorPersonaje: {fileID: 0}

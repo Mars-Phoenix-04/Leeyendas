@@ -28,8 +28,8 @@ public class Movimiento : MonoBehaviour
         if ((ManejadorDialogos.Instancia != null && ManejadorDialogos.Instancia.DialogoActivo) || (Evento_PuntoInflexion.InstanciaPuntoInflexion != null && Evento_PuntoInflexion.InstanciaPuntoInflexion.EstaActivo)) {
             AnimacionIdle();
             return; 
-        }
-        ControlAgacharse(); ControlMovimiento();
+        } else if(Manejador_Cinematicas.EnCinematica) { return; }
+            ControlAgacharse(); ControlMovimiento();
     }
     private void AnimacionIdle(){
         if (CAnimator == null) return;

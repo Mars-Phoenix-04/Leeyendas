@@ -16,6 +16,7 @@ public class ManejadorDialogos : MonoBehaviour
     public event Action InicioDialogo;
     public event Action FinDialogo;
     //Propiedades de los dialogos
+    private string[] TitulosDialogo;
     private string[] DialogoDescripcion;
     private int IndiceTXTActual;
     private bool EstaDialogando = false;
@@ -30,15 +31,16 @@ public class ManejadorDialogos : MonoBehaviour
         if (Instancia == null) { Instancia = this; DontDestroyOnLoad(gameObject); } else if (Instancia != this) { Destroy(gameObject); }
         if (CGDialogos != null) CGDialogos.alpha = 0f;  CGDialogos.blocksRaycasts = false;  CGDialogos.interactable = false;
     }
-
-    public void IniciarDescDialg (string TituloDD, string[] Texto, Action TerminaTXT = null){
+    //SOBRECARGA QUE PERMITE CAMBIAR ENTRE TITULOS AKA QUIEN ESTA HABLANDO
+    public void IniciarDescDialg (string[] TituloDD, string[] Texto, Action TerminaTXT = null){
         if (Texto == null || Texto.Length == 0) {TerminaTXT?.Invoke(); return; }
         DialogoDescripcion = Texto;
+        TitulosDialogo = TituloDD;
         IndiceTXTActual = 0;
         SeCompletaDialogoDescripcion = TerminaTXT;
         EstaDialogando = true;
 
-        if (TXTituloTexto != null) TXTituloTexto.text = TituloDD;
+        if (TXTituloTexto != null && TitulosDialogo != null && TitulosDialogo.Length > 0) TXTituloTexto.text = TituloDD[IndiceTXTActual];
         TXTDD.text = DialogoDescripcion[IndiceTXTActual];
         InicioDialogo?.Invoke();
         StopAllCoroutines();
@@ -46,9 +48,18 @@ public class ManejadorDialogos : MonoBehaviour
         StartCoroutine(TransicionFadeo(CGDialogos, 1f));
         if (CGHUD != null) StartCoroutine(TransicionFadeo(CGHUD, 0f));
     }
+    //SOBRECARGA DONDE SE REPITE EL PERSONAJE (SIRVE PARA CUANDO INTERACTUA CON OBJETOS)
+    public void IniciarDescDialg(string TituloDD, string[] Texto, Action TerminaTXT = null){
+        string[] TituloMarta = new string[Texto.Length];
+        for (int i = 0; i < Texto.Length; i++) { TituloMarta[i] = TituloDD; }
+        IniciarDescDialg(TituloMarta, Texto, TerminaTXT);
+    }
     private void EscribirTXT(){
         IndiceTXTActual++;
-        if (IndiceTXTActual < DialogoDescripcion.Length) TXTDD.text = DialogoDescripcion[IndiceTXTActual]; else FinDescDialg();
+        if (IndiceTXTActual < DialogoDescripcion.Length) {
+            TXTDD.text = DialogoDescripcion[IndiceTXTActual];
+            if (TXTituloTexto != null && TitulosDialogo != null && IndiceTXTActual < TitulosDialogo.Length) { TXTituloTexto.text = TitulosDialogo[IndiceTXTActual]; }
+        } else FinDescDialg();
     }
     private void FinDescDialg(){
         EstaDialogando = false;

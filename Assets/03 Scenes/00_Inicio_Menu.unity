@@ -184,17 +184,17 @@ MonoBehaviour:
   Capitulos:
   - NoCapitulo: 1
     TituloCapitulo: "La noche cuando el diablo bail\xF3"
-    IlustracionCapitulo: {fileID: 21300000, guid: b2c45e2fa442e6143b9e59aeec7c106d, type: 3}
+    IlustracionCapitulo: {fileID: 21300000, guid: 414ee2f5e4a9e9e45b046621c009f47e, type: 3}
     NombreEscena: 01_CinematicaInicio
     ExisteCapituloEs: 1
   - NoCapitulo: 2
     TituloCapitulo: Eulalia, "La planchada"
-    IlustracionCapitulo: {fileID: 21300000, guid: b2c45e2fa442e6143b9e59aeec7c106d, type: 3}
+    IlustracionCapitulo: {fileID: 21300000, guid: 5393ab80aa62f1842ac9d281cb4ddd6f, type: 3}
     NombreEscena: 
     ExisteCapituloEs: 0
   - NoCapitulo: 3
     TituloCapitulo: "El Loco P\xF3lice"
-    IlustracionCapitulo: {fileID: 21300000, guid: b2c45e2fa442e6143b9e59aeec7c106d, type: 3}
+    IlustracionCapitulo: {fileID: 21300000, guid: 2951aa02ef85f284e88bf30e6bef7a11, type: 3}
     NombreEscena: 
     ExisteCapituloEs: 0
   CGPantallaSeleccionCap: {fileID: 920400512}
@@ -11406,7 +11406,7 @@ Light:
     m_Strength: 1
     m_Bias: 0.05
     m_NormalBias: 0.4
-    m_NearPlane: 0.2
+    m_NearPlane: 0.6
     m_CullingMatrixOverride:
       e00: 1
       e01: 0
@@ -11788,8 +11788,8 @@ Light:
   serializedVersion: 12
   m_Type: 2
   m_Color: {r: 1, g: 0.5568628, b: 0, a: 1}
-  m_Intensity: 1
-  m_Range: 3
+  m_Intensity: 0.5
+  m_Range: 1
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize2D: {x: 0.5, y: 0.5}
@@ -11827,7 +11827,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -12415,17 +12415,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 717580454}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.042956725, y: 0.17348288, z: -0.007574429, w: 0.98387045}
+  m_LocalPosition: {x: 0, y: 0, z: 7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 920400511}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 5, y: 20, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 363, y: 21.09111}
-  m_SizeDelta: {x: 629.84, y: 512.674}
+  m_AnchoredPosition: {x: 350, y: 62}
+  m_SizeDelta: {x: 630, y: 630}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &717580456
 MonoBehaviour:
@@ -12440,7 +12440,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.9964132, b: 0.7877358, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -12650,8 +12650,8 @@ Light:
   serializedVersion: 12
   m_Type: 2
   m_Color: {r: 1, g: 0.5568628, b: 0, a: 1}
-  m_Intensity: 1
-  m_Range: 3
+  m_Intensity: 0.5
+  m_Range: 1
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize2D: {x: 0.5, y: 0.5}
@@ -12689,7 +12689,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -20115,8 +20115,8 @@ Light:
   serializedVersion: 12
   m_Type: 2
   m_Color: {r: 1, g: 0.5568628, b: 0, a: 1}
-  m_Intensity: 1
-  m_Range: 3
+  m_Intensity: 0.5
+  m_Range: 1
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize2D: {x: 0.5, y: 0.5}
@@ -20154,7 +20154,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -20333,7 +20333,7 @@ Transform:
   m_GameObject: {fileID: 1813490193}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.02, z: 0}
+  m_LocalPosition: {x: 0, y: 0.04, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -20379,8 +20379,8 @@ Light:
   serializedVersion: 12
   m_Type: 2
   m_Color: {r: 1, g: 0.5568628, b: 0, a: 1}
-  m_Intensity: 1
-  m_Range: 3
+  m_Intensity: 0.5
+  m_Range: 1
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize2D: {x: 0.5, y: 0.5}
@@ -20418,7 +20418,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -26997,26 +26997,6 @@ PrefabInstance:
     - target: {fileID: 6188750200333727416, guid: 92d3843622026d74db01194d045c49e5, type: 3}
       propertyPath: m_Name
       value: AudioManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 6532343185509685086, guid: 92d3843622026d74db01194d045c49e5, type: 3}
-      propertyPath: rolas.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6532343185509685086, guid: 92d3843622026d74db01194d045c49e5, type: 3}
-      propertyPath: rolas.Array.data[1].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: a93df53cda8047a40bac8815eacb9909, type: 3}
-    - target: {fileID: 6532343185509685086, guid: 92d3843622026d74db01194d045c49e5, type: 3}
-      propertyPath: rolas.Array.data[2].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: 9dc930b2b4fda904c9b2a1fcd997502e, type: 3}
-    - target: {fileID: 6532343185509685086, guid: 92d3843622026d74db01194d045c49e5, type: 3}
-      propertyPath: rolas.Array.data[1].NombreMusica
-      value: Cuarto Marta
-      objectReference: {fileID: 0}
-    - target: {fileID: 6532343185509685086, guid: 92d3843622026d74db01194d045c49e5, type: 3}
-      propertyPath: rolas.Array.data[2].NombreMusica
-      value: Cinematica Inicial
       objectReference: {fileID: 0}
     - target: {fileID: 7368653123475889600, guid: 92d3843622026d74db01194d045c49e5, type: 3}
       propertyPath: m_LocalPosition.x

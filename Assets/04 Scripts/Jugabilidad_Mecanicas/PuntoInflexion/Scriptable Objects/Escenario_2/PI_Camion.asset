@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b16ccb6f8a3cf74458f161ee0bb1437b, type: 3}
+  m_Name: PI_Camion
+  m_EditorClassIdentifier: Assembly-CSharp::OBJ_Script_PuntoInflexion
+  ImagenCap: {fileID: 0}
+  TXTCap: "Cap\xEDtulo 1"
+  TXTHistoria: "Libre de su prisi\xF3n, Marta inicia su aventura hacia el sal\xF3n
+    de baile. En su camino se topa con varios de sus vecinos y explora su vecindad
+    en busca de transporte. \n\nCon cada voz que escucha, recuerda las advertencias
+    de sus padres y comienza a cuestionarse si los rumores del Diablo son ciertos.
+    \xBFAcaso sus padres ten\xEDan raz\xF3n?\n\nMientras buscaba en unos botes de
+    basura, encontr\xF3 un tesoro que la ayudar\xEDa a llegar a su destino. Un cami\xF3n
+    se detiene frente a la cervecer\xEDa y, con sus <b>{0}</b> en mano, corre hacia
+    \xE9l."
+  TXTResultadoPuntoInflexion:
+  - "Tom\xE9, para el pasaje."
+  - "No puedo creer el dinero que encontr\xE9 en la basura me haya sido \xFAtil,
+    qu\xE9 asco."
+  - "Esto est\xE1 saliendo mejor de lo que pens\xE9."
+  - Solo espero que las vecinas chismosas no le digan nada a mis padres.
+  - Solo espero que las vecinas chismosas no le digan nada a mis padres.
+  ProgresoHistoria: 10
+  ClaveCorrectaUso: {fileID: 11400000, guid: 8bf295baa2f221746b0de76e805026b7, type: 2}
+  VaACambiarDeEscena: 1
+  NombreEscenaCambiar: 01_ACT2_SanLorenzo

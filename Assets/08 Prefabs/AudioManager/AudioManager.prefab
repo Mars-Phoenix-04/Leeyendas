@@ -181,6 +181,14 @@ MonoBehaviour:
   rolas:
   - NombreMusica: Menu Principal
     clip: {fileID: 8300000, guid: 71d9b029b90b9c841b0e935487d5c051, type: 3}
+  - NombreMusica: Cinematica Inicial
+    clip: {fileID: 8300000, guid: 9dc930b2b4fda904c9b2a1fcd997502e, type: 3}
+  - NombreMusica: Cuarto Marta
+    clip: {fileID: 8300000, guid: a93df53cda8047a40bac8815eacb9909, type: 3}
+  - NombreMusica: Vecindad
+    clip: {fileID: 8300000, guid: 362f28f4bee43394f9a07e4ca051f16b, type: 3}
+  - NombreMusica: SanLorenzo
+    clip: {fileID: 8300000, guid: a93df53cda8047a40bac8815eacb9909, type: 3}
 --- !u!114 &16064684335983396
 MonoBehaviour:
   m_ObjectHideFlags: 0

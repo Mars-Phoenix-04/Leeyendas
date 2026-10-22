@@ -20,11 +20,13 @@ MonoBehaviour:
     \n\nLamentablemente, debido a rumores de que el diablo est\xE1 dando su recorrido
     por la vida nocturna, sus padres le proh\xEDben salir de la casa tan tarde. \n\nEncerrada
     y sin mucho que hacer, Marta explora su cuarto y descubre que puede salir por
-    la <b>{0}</b>"
+    la <b>{0}</b>."
   TXTResultadoPuntoInflexion:
-  - Eso era lo que faltaba, si es cierto, pero lo importante es...
-  - Que ahora ya se como escapar de esta casa
-  ProgresoHistoria: 5
+  - "Perfecto, si me escapo por la ventana, mis padres nunca sabr\xE1n que sal\xED
+    de mi cuarto y podr\xE9 volver sin problema antes del amanecer. "
+  - Es hora de comenzar a vivir mi vida nocturna.
+  - "Mal\xEDbu aqu\xED voy."
+  ProgresoHistoria: 10
   ClaveCorrectaUso: {fileID: 11400000, guid: 9dc5501e1caca96489b43de28bcb5e03, type: 2}
   VaACambiarDeEscena: 1
   NombreEscenaCambiar: 01_ACT1_Vecindad

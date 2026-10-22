@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/03 Scenes/01_CinematicaInicio.unity
     guid: cbae8cff4a2586346a68e3889e31389e
+  - enabled: 1
+    path: Assets/03 Scenes/01_ACT3_Malibu.unity
+    guid: 9fde5903ff17a004c9da793aa09017d9
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

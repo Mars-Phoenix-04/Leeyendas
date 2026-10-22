@@ -18,7 +18,11 @@ public class InteractorDelJugador : MonoBehaviour
     private Coroutine CRDesvanecimiento;
     private float ValorAlfa = -1f;
     private InterfazInteraccion InteraccionCercana;
-
+    private void Awake(){
+        if(CGMensajeInt == null) { GameObject CanvasMSGObj = GameObject.Find("Interaccion"); if(CanvasMSGObj != null) { CGMensajeInt = CanvasMSGObj.GetComponent<CanvasGroup>(); } }
+        if (TXTMensajeInt == null) { GameObject TXTObj = GameObject.Find("TXT_Investigar"); if (TXTObj != null) { TXTMensajeInt = TXTObj.GetComponent<TextMeshProUGUI>(); } }
+        if(PosJugador == null) { PosJugador = transform; }
+    }
     void Start(){   if (CGMensajeInt != null) CGMensajeInt.alpha = 0f;  }
 
     void Update(){

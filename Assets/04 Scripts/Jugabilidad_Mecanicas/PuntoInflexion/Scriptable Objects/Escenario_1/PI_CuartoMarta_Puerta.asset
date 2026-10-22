@@ -14,9 +14,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::OBJ_Script_PuntoInflexion
   ImagenCap: {fileID: 0}
   TXTCap: "Cap\xEDtulo 1"
-  TXTHistoria: 
-  TXTResultadoPuntoInflexion: []
-  ProgresoHistoria: 5
+  TXTHistoria: "Hace mucho tiempo, en la \xE9poca de los a\xF1os 60, una joven Marta
+    escuch\xF3 en la radio acerca de la gran apertura de un nuevo sal\xF3n de baile
+    en su ciudad. Emocionada, les pregunta a sus padres si la dejan asistir al evento.
+    \n\nLamentablemente, debido a rumores de que el diablo est\xE1 dando su recorrido
+    por la vida nocturna, sus padres le proh\xEDben salir de la casa tan tarde. Le
+    ordenan ir a su habitaci\xF3n y se encierra. \n\nFrustrada y desesperada por
+    una forma de salir, decide desobedecer a sus padres y sale disparada por la <b>{0}</b>
+    sin ser vista."
+  TXTResultadoPuntoInflexion:
+  - "\xBFLa dejaron abierta?"
+  - "Lo siento mam\xE1 y pap\xE1, pero parece que ni siquiera me conocen."
+  - "Mientras m\xE1s r\xE1pido salga de este basurero mejor. Solo tendr\xE9 que ser
+    muy cautelosa para que no me escuchen al volver."
+  - "Aunque siento que hab\xEDa una forma m\xE1s sigilosa de salir, creo que esta
+    es mi mejor opci\xF3n."
+  - "Mal\xEDbu aqu\xED voy."
+  ProgresoHistoria: 10
   ClaveCorrectaUso: {fileID: 11400000, guid: b8be695f0f0b08143bf76156607e8b3a, type: 2}
   VaACambiarDeEscena: 1
   NombreEscenaCambiar: 01_ACT1_Vecindad
