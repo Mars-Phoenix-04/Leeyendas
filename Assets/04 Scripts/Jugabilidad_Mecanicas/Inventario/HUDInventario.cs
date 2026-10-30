@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class HUDInventario : MonoBehaviour
 {
-    [System.Serializable] public struct CasillasInv { public Image iconoImagen; public CanvasGroup CGCasilla; public TextMeshProUGUI ClaveTXT; }
+    [System.Serializable] public struct CasillasInv { public Image iconoImagen; public CanvasGroup CGCasilla; /*public TextMeshProUGUI ClaveTXT;*/ }
     [SerializeField] private CasillasInv[] ArregloCasillas = new CasillasInv[ManejadorInventario.NoCasillas];
     private bool EstaSuscrito = false;
 
@@ -40,10 +40,12 @@ public class HUDInventario : MonoBehaviour
                     ArregloCasillas[i].iconoImagen.sprite = clave.IconoClave;
                     ArregloCasillas[i].iconoImagen.enabled = true;
                 }
+                /*
                 if (ArregloCasillas[i].ClaveTXT != null){
                     ArregloCasillas[i].ClaveTXT.text = clave.NombreClave;
                     ArregloCasillas[i].ClaveTXT.enabled = true;
                 }
+                */
                 if (ArregloCasillas[i].CGCasilla != null){
                     ArregloCasillas[i].CGCasilla.alpha = 1f;
                 }
@@ -53,10 +55,12 @@ public class HUDInventario : MonoBehaviour
                     ArregloCasillas[i].iconoImagen.sprite = null;
                     ArregloCasillas[i].iconoImagen.enabled = false;
                 }
+                /*
                 if (ArregloCasillas[i].ClaveTXT != null){
                     ArregloCasillas[i].ClaveTXT.text = string.Empty;
                     ArregloCasillas[i].ClaveTXT.enabled = false;
                 }
+                */
                 if (ArregloCasillas[i].CGCasilla != null){
                     ArregloCasillas[i].CGCasilla.alpha = 0f;
                 }

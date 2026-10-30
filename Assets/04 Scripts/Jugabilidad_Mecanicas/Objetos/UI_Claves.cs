@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class UI_Claves : MonoBehaviour
 {
     public static UI_Claves InstanciaUiClave { get; private set; }
+    public static bool MostrandoClave { get; private set; } = false;
     [Header("Pantalla de Clave Obtenida")]
     [SerializeField] private CanvasGroup CGClaveObtenida;
     [SerializeField] private Image SpriteClave;
@@ -19,13 +20,16 @@ public class UI_Claves : MonoBehaviour
     public void MostrarPantallaClave(Clave_DATA Clave, Action CerrarPantalla = null){
         if (Clave == null) {CerrarPantalla?.Invoke(); return; }
         if (SpriteClave != null) { SpriteClave.sprite = Clave.IconoClave; SpriteClave.enabled = true; }
+        SFXManager.Instancia.ReproducirSonido2D("ClaveAgarrada");
         StartCoroutine(SecuenciaMostrarClave(CerrarPantalla));
     }
     private IEnumerator SecuenciaMostrarClave(Action AlCerrar){
+        MostrandoClave = true;
         yield return TransicionFadeo(CGClaveObtenida, 1f);
         yield return new WaitForSecondsRealtime(0.25f);
         while(!Input.GetKeyDown(KeyCode.Return) && !Input.GetKeyDown(KeyCode.Space) && !Input.GetMouseButtonDown(0)) { yield return null; }
         yield return TransicionFadeo(CGClaveObtenida, 0f);
+        MostrandoClave = false;
         AlCerrar?.Invoke();
     }
     private void OcultarPantalla() { if (CGClaveObtenida == null) return; CGClaveObtenida.alpha = 0f; CGClaveObtenida.blocksRaycasts = false; CGClaveObtenida.interactable = false; }

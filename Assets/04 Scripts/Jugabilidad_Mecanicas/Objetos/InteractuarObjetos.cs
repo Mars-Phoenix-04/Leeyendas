@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using Unity.Cinemachine;
 using UnityEngine;
 
@@ -10,6 +11,7 @@ public class InteractuarObjetos : MonoBehaviour, InterfazInteraccion
     [SerializeField] private string NombreObjeto;
     [SerializeField] private string AccionObjeto;
     [SerializeField] private DialogoNPC[] TXTDialogoNormal;
+    [SerializeField] private bool EsObjetoTutorial = false;
 
     [Header("INTERACCION CON CLAVE")]
     [SerializeField] private Clave_DATA ClaveEvento;
@@ -25,6 +27,10 @@ public class InteractuarObjetos : MonoBehaviour, InterfazInteraccion
     [SerializeField] private CinemachineCamera CamInteracion;
     public void Interactuar(InteractorDelJugador InteractorJ){
         if (ManejadorDialogos.Instancia == null || ManejadorDialogos.Instancia.DialogoActivo) return;
+
+        //OBJETO PARA MOSTRAR TUTORIAL
+        if (EsObjetoTutorial) { if(UI_Tutorial.TutorialInstancia != null) { UI_Tutorial.TutorialInstancia.MostrarTutorial(); } return; }
+
         bool CuentaConUnaClave = false;
         SFXManager.Instancia.ReproducirSonido2D("ClicBTN");
         if (ClaveEvento != null && ManejadorInventario.Instancia != null) { CuentaConUnaClave = ManejadorInventario.Instancia.TieneClave(ClaveEvento); }
@@ -32,7 +38,7 @@ public class InteractuarObjetos : MonoBehaviour, InterfazInteraccion
         if(GiraHaciaPlayer && InteractorJ != null){
             Vector3 DireccionNPC = (InteractorJ.transform.position - transform.position);
             DireccionNPC.y = 0;
-            if(DireccionNPC != Vector3.zero) { transform.rotation = Quaternion.LookRotation(DireccionNPC); }
+            if(DireccionNPC != Vector3.zero) { StopAllCoroutines(); StartCoroutine(RotacionPersonaje(DireccionNPC)); }
         }
         if(NPCAnimator != null) { NPCAnimator.SetBool(ParametroHablar, true); }
         // CAMBIO PRIORIDADES
@@ -59,6 +65,14 @@ public class InteractuarObjetos : MonoBehaviour, InterfazInteraccion
             ArregloDialogos[i] = lineas[i].TXTLinea;
         }
         if(CBFin != null) { ManejadorDialogos.Instancia.IniciarDescDialg(ArregloTitulos, ArregloDialogos, CBFin); } else { ManejadorDialogos.Instancia.IniciarDescDialg(ArregloTitulos, ArregloDialogos); }
+    }
+    private IEnumerator RotacionPersonaje(Vector3 DireccionObj){
+        Quaternion RotacionInicial = transform.rotation;
+        Quaternion RotacionFinal = Quaternion.LookRotation(DireccionObj);
+        float tiempo = 0f;
+        float tiempogrio = 1f;
+        while (tiempo < tiempogrio) { tiempo += Time.deltaTime; float t = tiempo / tiempogrio; transform.rotation = Quaternion.Slerp(RotacionInicial, RotacionFinal, t); yield return null; }
+        transform.rotation = RotacionFinal;
     }
     private void VolverEstadoNormal(){if(NPCAnimator != null) { NPCAnimator.SetBool(ParametroHablar, false); }  if (CamInteracion != null) { CamInteracion.Priority = 0; } }
     public string TextoInteraccionUI() => $"{AccionObjeto} {NombreObjeto}";

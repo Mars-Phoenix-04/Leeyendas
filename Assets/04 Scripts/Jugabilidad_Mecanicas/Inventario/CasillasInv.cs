@@ -8,7 +8,7 @@ public class CasillasInv : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 {
     [Header("Referencias a la UI y elementos de las casillas")]
     [SerializeField] private Image SpriteClave;
-    [SerializeField] private TextMeshProUGUI TXTNombreClave;
+    //[SerializeField] private TextMeshProUGUI TXTNombreClave;
     [SerializeField] private TextMeshProUGUI TXTDescClave;
     [SerializeField] private CanvasGroup CasillaFrente;
     [SerializeField] private CanvasGroup CasillaDescHover;
@@ -20,7 +20,7 @@ public class CasillasInv : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     void Update()
     {
         if (!ClaveExiste) return;
-        float AlphaFrente = HoverSINO ? 0f : 1f;
+        float AlphaFrente = HoverSINO ? 1f : 1f;
         float AlphaDescripcion = HoverSINO ? 1f : 0f;
         if (CasillaFrente != null) CasillaFrente.alpha = Mathf.MoveTowards(CasillaFrente.alpha, AlphaFrente, Time.unscaledDeltaTime * VelocidadFadeo);
         if (CasillaDescHover != null) CasillaDescHover.alpha = Mathf.MoveTowards(CasillaDescHover.alpha, AlphaDescripcion, Time.unscaledDeltaTime * VelocidadFadeo);
@@ -30,7 +30,7 @@ public class CasillasInv : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         if (clave != null) {
             ClaveExiste = true;
             if (SpriteClave != null) { SpriteClave.sprite = clave.IconoClave; SpriteClave.enabled = (clave.IconoClave != null); }
-            if (TXTNombreClave != null) TXTNombreClave.text = clave.NombreClave;
+            //if (TXTNombreClave != null) TXTNombreClave.text = clave.NombreClave;
             if (TXTDescClave != null) TXTDescClave.text = clave.descripcion;
             ResetearHover();
         }
@@ -40,7 +40,7 @@ public class CasillasInv : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         HoverSINO = false;
         ClaveExiste = false;
         if (SpriteClave != null) SpriteClave.enabled = false;
-        if (TXTNombreClave != null) TXTNombreClave.text = string.Empty;
+        //if (TXTNombreClave != null) TXTNombreClave.text = string.Empty;
         if (TXTDescClave != null) TXTDescClave.text = string.Empty;
         if (CasillaFrente != null) CasillaFrente.alpha = 0.2f;
         if (CasillaDescHover != null) CasillaDescHover.alpha = 0f;

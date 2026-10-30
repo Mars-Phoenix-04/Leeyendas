@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clave_DATA
   IDClave: 1
   NombreClave: ventana
-  IconoClave: {fileID: 21300000, guid: 15d93ed2d4a7f4f44b142bbdd80e9bdd, type: 3}
-  PuntosComprension: 20
+  IconoClave: {fileID: 21300000, guid: cda919ecf05005346b65afede95a1539, type: 3}
+  PuntosComprension: 25
   descripcion: "La ventana, tengo muchos recuerdos con ella, pero en este momento,
-    solamente son las rejas de mi prisi\xF3n"
+    solamente son las rejas de mi prisi\xF3n."

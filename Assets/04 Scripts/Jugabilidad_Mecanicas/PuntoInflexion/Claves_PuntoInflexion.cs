@@ -6,7 +6,7 @@ public class Claves_PuntoInflexion : MonoBehaviour
 {
     [Header("Elementos de la interfaz de Punto Inflexion")]
     [SerializeField] private Image SpriteClave;
-    [SerializeField] private TextMeshProUGUI TXTNombreClave;
+    //[SerializeField] private TextMeshProUGUI TXTNombreClave;
     [SerializeField] private RectTransform CTransformClave;
     //Valores del hover de las claves
     private float ArribaClavePixeles = 25f; //Cuanto sube
@@ -25,10 +25,12 @@ public class Claves_PuntoInflexion : MonoBehaviour
                 SpriteClave.sprite = Clave.IconoClave;
                 SpriteClave.enabled = (Clave.IconoClave != null);
             }
-            if(TXTNombreClave != null) {
+            /*
+            if (TXTNombreClave != null) {
                 TXTNombreClave.text = Clave.NombreClave;
                 TXTNombreClave.enabled = true;
             }
+            */
         }
         else
         {
@@ -38,7 +40,7 @@ public class Claves_PuntoInflexion : MonoBehaviour
 
     public void LimpiarCasilla(){
         if (SpriteClave != null) SpriteClave.enabled = false;
-        if (TXTNombreClave != null) TXTNombreClave.text = string.Empty;
+        //if (TXTNombreClave != null) TXTNombreClave.text = string.Empty;
         ClaveSeleccionada(false);
     }
 

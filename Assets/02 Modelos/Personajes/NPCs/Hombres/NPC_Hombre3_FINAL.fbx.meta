@@ -3,7 +3,92 @@ guid: 52045d840e331f748b82057d1506088f
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cabello
+    second: {fileID: 2100000, guid: ff85b11e18cd488488a18721e256d076, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Camisa
+    second: {fileID: 2100000, guid: 51538d59936805148a0361ed388e56eb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Chaleco
+    second: {fileID: 2100000, guid: e317e152c874a504e8e9b63e985c91d4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Corbata
+    second: {fileID: 2100000, guid: d054e86cbdbce534e962b58b50260a77, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cuerpo
+    second: {fileID: 2100000, guid: cf1ca14d41eb46d46b1e98f8914c6488, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dientes
+    second: {fileID: 2100000, guid: 20c63fd7ad3e4784e838a4bf2e287737, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Encias
+    second: {fileID: 2100000, guid: 93a76fdeff2eb174ab000705df7cf674, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ojo
+    second: {fileID: 2100000, guid: 0a28bd6a07d94c643ac37638a148acf4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pantalon
+    second: {fileID: 2100000, guid: 58319b963184b2645881479001076eb7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pestanas
+    second: {fileID: 2100000, guid: ddbc563b26373c94981bb5d40f61d3ff, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pupila
+    second: {fileID: 2100000, guid: 55567910b405f8e40af6b0f0153f93c1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Zapatos
+    second: {fileID: 2100000, guid: a9a53bc57b26b4442aaab353b0ad13f6, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: T_Cabello3
+    second: {fileID: 2800000, guid: be5db7b8570b6544bb0f35d718c02c46, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: T_OjoVerde
+    second: {fileID: 2800000, guid: 32dded136f7b4c24c9db60592cb5a32a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: T_Pantalon3
+    second: {fileID: 2800000, guid: 9e7214fb9e73eea4188c37688face61a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: T_TezClara
+    second: {fileID: 2800000, guid: 4317ab6910f4fad468b52ae612122d81, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: T_Traje3
+    second: {fileID: 2800000, guid: b3faf739f77d5054bab7e996f6e0f647, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0

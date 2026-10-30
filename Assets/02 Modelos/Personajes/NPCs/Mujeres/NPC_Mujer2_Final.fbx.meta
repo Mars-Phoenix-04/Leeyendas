@@ -3,7 +3,57 @@ guid: 71ccc4343b5b87544b9682870d9c9057
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cabello
+    second: {fileID: 2100000, guid: 8ed4e616e9d3db9458bc396b4e6fad23, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cuerpo
+    second: {fileID: 2100000, guid: 90a98f24798ac474dab9d4ed0110f8c4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dientes
+    second: {fileID: 2100000, guid: 4ccfa3f89b4932345847c13d7b2d970a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Encias
+    second: {fileID: 2100000, guid: 794b91f3dbb2d76439d0c571dd29a1be, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_CejasPestanas
+    second: {fileID: 2100000, guid: 96ad5f23703903a4481a098a0b244cc8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_DetallesVestido
+    second: {fileID: 2100000, guid: 9359f0e14ebd7374a8cc3c73e7778e1f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ojo
+    second: {fileID: 2100000, guid: 1cc2fb1429b98684593f672dfc74a827, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pupila
+    second: {fileID: 2100000, guid: f86a4b480cf7f094da753a02e556dfe3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Vestido
+    second: {fileID: 2100000, guid: 38772bc270e5f6f42ab3970a45fa0332, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Zapatos
+    second: {fileID: 2100000, guid: bcd2f868837592342b1cbe76f2008c80, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

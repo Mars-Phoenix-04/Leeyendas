@@ -188,7 +188,11 @@ MonoBehaviour:
   - NombreMusica: Vecindad
     clip: {fileID: 8300000, guid: 362f28f4bee43394f9a07e4ca051f16b, type: 3}
   - NombreMusica: SanLorenzo
-    clip: {fileID: 8300000, guid: a93df53cda8047a40bac8815eacb9909, type: 3}
+    clip: {fileID: 8300000, guid: c1038979da676ad44959fbf38bd534c4, type: 3}
+  - NombreMusica: Malibu
+    clip: {fileID: 8300000, guid: c97f607a11dfa32469c3cf677fb06e05, type: 3}
+  - NombreMusica: Final
+    clip: {fileID: 8300000, guid: 5913ddb5456f38b498a6d7053f086f75, type: 3}
 --- !u!114 &16064684335983396
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -225,6 +229,30 @@ MonoBehaviour:
   - grupoID: LibroAgitado
     clips:
     - {fileID: 8300000, guid: cb5b65dc88d92624b8e0a4292284a072, type: 3}
+  - grupoID: Punto Inflexion Completado
+    clips:
+    - {fileID: 8300000, guid: 07457cb2d5b7d0f4490cf4b6907aa456, type: 3}
+  - grupoID: Dialogos
+    clips:
+    - {fileID: 8300000, guid: ac683e2b506fab241b0c756bda76f951, type: 3}
+    - {fileID: 8300000, guid: f6b83de6e64470a46b54830d0d50d82f, type: 3}
+    - {fileID: 8300000, guid: 33071e9dfbd5ea0449f52dd4a129e3c6, type: 3}
+    - {fileID: 8300000, guid: bdbca66f79629464997bcc5ed376f2b7, type: 3}
+    - {fileID: 8300000, guid: 28387975cb2603b4cab8594075a2ab7c, type: 3}
+    - {fileID: 8300000, guid: 7fa1c0d3093281e4dbeba6319c31e200, type: 3}
+    - {fileID: 8300000, guid: 6b6877413502857449cd05b5be7b4c53, type: 3}
+    - {fileID: 8300000, guid: 1123cb995afa7b2419c11923300703df, type: 3}
+    - {fileID: 8300000, guid: 3b897692dbad67e4b825597ace5717ba, type: 3}
+    - {fileID: 8300000, guid: 8a0bc7f53fac43c44915b52633cb47d6, type: 3}
+  - grupoID: PuntoInflexion IniciaAlerta
+    clips:
+    - {fileID: 8300000, guid: 3a10839947473674f868d381241d815c, type: 3}
+  - grupoID: ClaveAgarrada
+    clips:
+    - {fileID: 8300000, guid: 319a5d1e5f62d794cb5b1261b1a0553c, type: 3}
+  - grupoID: UsoClaveIncorrecta
+    clips:
+    - {fileID: 8300000, guid: ba1036728d8ec824c971d8df5919f1ca, type: 3}
 --- !u!114 &7689227753598670558
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -15,9 +15,9 @@ public class MusicManager : MonoBehaviour
         }
     }
 
-    public void ReproducirMusica (string NombreCancion, float DuracionFade = 0.5f){ StartCoroutine(FadeoEntreCanciones(MusicaLib.ObtenerRola(NombreCancion), DuracionFade));}
+    public void ReproducirMusica (string NombreCancion, float DuracionFade = 0.7f){ StartCoroutine(FadeoEntreCanciones(MusicaLib.ObtenerRola(NombreCancion), DuracionFade));}
 
-    IEnumerator FadeoEntreCanciones(AudioClip SiguienteMusica, float DuracionFade = 0.5f){
+    IEnumerator FadeoEntreCanciones(AudioClip SiguienteMusica, float DuracionFade = 0.7f){
         float porcentaje = 0;
         while (porcentaje < 1){
             porcentaje += Time.deltaTime * 1 / DuracionFade;

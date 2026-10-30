@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b16ccb6f8a3cf74458f161ee0bb1437b, type: 3}
   m_Name: PI_CuartoMarta_Puerta
   m_EditorClassIdentifier: Assembly-CSharp::OBJ_Script_PuntoInflexion
-  ImagenCap: {fileID: 0}
+  ImagenCap: {fileID: 21300000, guid: 414ee2f5e4a9e9e45b046621c009f47e, type: 3}
   TXTCap: "Cap\xEDtulo 1"
   TXTHistoria: "Hace mucho tiempo, en la \xE9poca de los a\xF1os 60, una joven Marta
     escuch\xF3 en la radio acerca de la gran apertura de un nuevo sal\xF3n de baile
@@ -29,8 +29,8 @@ MonoBehaviour:
     muy cautelosa para que no me escuchen al volver."
   - "Aunque siento que hab\xEDa una forma m\xE1s sigilosa de salir, creo que esta
     es mi mejor opci\xF3n."
-  - "Mal\xEDbu aqu\xED voy."
-  ProgresoHistoria: 10
+  - "Malibu aqu\xED voy."
+  ProgresoHistoria: 20
   ClaveCorrectaUso: {fileID: 11400000, guid: b8be695f0f0b08143bf76156607e8b3a, type: 2}
   VaACambiarDeEscena: 1
   NombreEscenaCambiar: 01_ACT1_Vecindad

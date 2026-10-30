@@ -1,6 +1,6 @@
 using System.Collections;
-using Unity.VectorGraphics;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
 public class UI_Pausa : MonoBehaviour
@@ -23,7 +23,8 @@ public class UI_Pausa : MonoBehaviour
     }
     private void Update(){
         if (Transicion) return;
-        if( Input.GetKeyDown(KeyCode.P)) { if (!JuegoPausado) { PausarJuego(); } else { if (PantallaActiva == OpcionesMenu) { BTNVolverMenuPausa(); } else { BTNContinuar(); } } }
+        if (UI_Claves.MostrandoClave || UI_Tutorial.TutorialActivo) return;
+        if ( Input.GetKeyDown(KeyCode.P)) { if (!JuegoPausado) { SFXManager.Instancia.ReproducirSonido2D("ClicBTN"); PausarJuego(); } else { if (PantallaActiva == OpcionesMenu) { SFXManager.Instancia.ReproducirSonido2D("ClicBTN"); BTNVolverMenuPausa(); } else { BTNContinuar(); } } }
     }
     public void PausarJuego(){
         JuegoPausado = true;
@@ -82,5 +83,17 @@ public class UI_Pausa : MonoBehaviour
             yield return null;
         }
         CanvasG.alpha = ValorAlfa;
+    }
+    //Hacer que si se sale de la aplicación, el jugador pueda seguir usando pausa.
+    private void OnApplicationFocus(bool focus){ //Este es para cuando vuelvo al juego
+        if(focus && JuegoPausado){
+            RefrescarES();
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+    }
+    private void RefrescarES(){
+        EventSystem ES = EventSystem.current;
+        if(ES != null) { ES.SetSelectedGameObject(null); ES.enabled = false; ES.enabled = true; var ModuloInput = ES.GetComponent<UnityEngine.EventSystems.StandaloneInputModule>(); if(ModuloInput != null) { ModuloInput.enabled = false; ModuloInput.enabled = true; } }
     }
 }

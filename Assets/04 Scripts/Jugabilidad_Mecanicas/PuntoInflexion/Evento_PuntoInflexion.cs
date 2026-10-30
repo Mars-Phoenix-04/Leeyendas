@@ -1,17 +1,20 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using System;
+using UnityEngine.UI;
+using UnityEngine.VFX;
 public class Evento_PuntoInflexion : MonoBehaviour
 {
     public static Evento_PuntoInflexion InstanciaPuntoInflexion { get; private set; }
+    public static bool EnPuntoInflexion { get; private set; } = false;
     [Header("Elementos de la UI")]
     [SerializeField] private CanvasGroup CGHUD;
     [SerializeField] private CanvasGroup CGPuntoInflexion;
-    [SerializeField] private float DuracionDesvanecimiento = 0.8f;
+    [SerializeField] private CanvasGroup CGOpcionesPI;
+    [SerializeField] private float DuracionDesvanecimiento = 0.5f;
     [SerializeField] private Image IlustraciónCapitulo;
     [SerializeField] private TextMeshProUGUI TXTCapitulo;
     [SerializeField] private TextMeshProUGUI TXTHistoria;
@@ -29,6 +32,7 @@ public class Evento_PuntoInflexion : MonoBehaviour
 
     //Instancia del evento activa, eventos, listas de inventarios.
     public bool EstaActivo { get; private set; }
+    private bool EnPantallaOpcionesPI = false;
     private OBJ_Script_PuntoInflexion EventoPI;
 
     private List<Clave_DATA> ClavesDisponibles = new List<Clave_DATA>();
@@ -39,7 +43,12 @@ public class Evento_PuntoInflexion : MonoBehaviour
 
     private void Awake(){
         if (InstanciaPuntoInflexion == null) InstanciaPuntoInflexion = this; else Destroy(gameObject);
-        if(CGPuntoInflexion != null){
+        if (CGOpcionesPI != null){
+            CGOpcionesPI.alpha = 0f;
+            CGOpcionesPI.blocksRaycasts = false;
+            CGOpcionesPI.interactable = false;
+        }
+        if (CGPuntoInflexion != null){
             CGPuntoInflexion.alpha = 0f;
             CGPuntoInflexion.blocksRaycasts = false;
             CGPuntoInflexion.interactable = false;
@@ -48,20 +57,23 @@ public class Evento_PuntoInflexion : MonoBehaviour
         if (CGAlertaComprension != null) CGAlertaComprension.alpha = 0f;
     }
     private void Update(){
+        if(EnPantallaOpcionesPI){
+            if (Input.GetKeyDown(KeyCode.Return)) { SFXManager.Instancia.ReproducirSonido2D("PuntoInflexion IniciaAlerta"); StartCoroutine(IniciarPuntoDeInflexionAhoraSi()); SFXManager.Instancia.ReproducirSonido2D("ClicBTN"); } else if (Input.GetKeyDown(KeyCode.Escape)) { SFXManager.Instancia.ReproducirSonido2D("ClicBTN"); StartCoroutine(RegresarAlEscenario()); } return;
+        }
         if (!EstaActivo || PITerminado) return;
         if (EsperandoInput) { ConfirmarUsoClave(); } else { NavegacionEntreClaves(); }
     }
 
     public void IniciarPuntoInflexion(OBJ_Script_PuntoInflexion EPI){
+        EnPuntoInflexion = true;
         StartCoroutine(TransicionFadeo(CGHUD, 0f));
         EventoPI = EPI;
-        EstaActivo = true;
+        EnPantallaOpcionesPI = true;
+        EstaActivo = false;
         EsperandoInput = false;
         PITerminado = false;
         CargarElementosPuntoInflexion();
-        CargarInventarioClaves();
-        ActualizarTexto();
-        StartCoroutine(TransicionFadeo(CGPuntoInflexion, 1f));
+        StartCoroutine(TransicionFadeo(CGOpcionesPI, 1f));
     }
     private void CargarElementosPuntoInflexion(){
         if (EventoPI == null) return;
@@ -91,15 +103,18 @@ public class Evento_PuntoInflexion : MonoBehaviour
         IndiceClaveSelec = ClavesDisponibles.Count > 0 ? 0 : -1;
         ActualizarSeleccionCasillas();
     }
-
+    //Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow
+    //Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow
     private void NavegacionEntreClaves() {
         if (ClavesDisponibles.Count == 0) return;
-        if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow)){
+        if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow)){
+            SFXManager.Instancia.ReproducirSonido2D("ClicBTN");
             IndiceClaveSelec--;
             if (IndiceClaveSelec < 0) IndiceClaveSelec = ClavesDisponibles.Count - 1;
             EstadoSeleccionado();
         }
-        else if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow)){
+        else if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow)){
+            SFXManager.Instancia.ReproducirSonido2D("ClicBTN");
             IndiceClaveSelec++;
             if (IndiceClaveSelec >= ClavesDisponibles.Count) IndiceClaveSelec = 0;
             EstadoSeleccionado();
@@ -133,8 +148,8 @@ public class Evento_PuntoInflexion : MonoBehaviour
         StartCoroutine(TransicionFadeo(CGAlertaConfirmar, 1f));
     }
     private void ConfirmarUsoClave(){
-        if (Input.GetKeyDown(KeyCode.Return)) { StartCoroutine(UsoClave()); }
-        else if (Input.GetKeyDown(KeyCode.Escape)) { EsperandoInput = false; StartCoroutine(TransicionFadeo(CGAlertaConfirmar, 0f)); }
+        if (Input.GetKeyDown(KeyCode.Return)) { SFXManager.Instancia.ReproducirSonido2D("ClicBTN"); StartCoroutine(UsoClave()); }
+        else if (Input.GetKeyDown(KeyCode.Escape)) { SFXManager.Instancia.ReproducirSonido2D("ClicBTN"); EsperandoInput = false; StartCoroutine(TransicionFadeo(CGAlertaConfirmar, 0f)); }
     }
 
     //Corutinas, en pocas palabras, mi pesadilla
@@ -155,12 +170,14 @@ public class Evento_PuntoInflexion : MonoBehaviour
         ProgresoComprensionNarrativa.Instancia.ProgresoCapituloCambio(ProgresoPuntos);
         if (TXTComprensionObtenida != null) { TXTComprensionObtenida.text = $"+{ComprensionPuntos} Comprensión"; }
         yield return TransicionFadeo(CGAlertaComprension, 1f);
+        SFXManager.Instancia.ReproducirSonido2D("Punto Inflexion Completado");
         yield return new WaitForSecondsRealtime(5f);
         yield return TransicionFadeo(CGAlertaComprension, 0f);
 
         if(ManejadorInventario.Instancia != null) { ManejadorInventario.Instancia.EliminarClave(CasillaInventario); }
         yield return TransicionFadeo(CGPuntoInflexion, 0f);
         EstaActivo = false;
+        EnPuntoInflexion = false;
         Action AccionPosDialogo = null;
         if (EventoPI != null && EventoPI.CambiarDeEscena && !string.IsNullOrEmpty(EventoPI.NombreSiguienteEscena)) { 
             Debug.Log($" Cambiar escena = {EventoPI.CambiarDeEscena} y el nombre es {EventoPI.NombreSiguienteEscena}"); 
@@ -192,11 +209,28 @@ public class Evento_PuntoInflexion : MonoBehaviour
         CanvasG.alpha = ValorAlfa;
     }
     private IEnumerator ClaveIncorrecta(){
+        SFXManager.Instancia.ReproducirSonido2D("UsoClaveIncorrecta");
         yield return TransicionFadeo(CGEsaNoEsLaClave, 1f);
         yield return new WaitForSecondsRealtime(0.25f);
-        while (!Input.GetKeyDown(KeyCode.Return) && !Input.GetKeyDown(KeyCode.Space) && !Input.GetMouseButtonDown(0)) { yield return null; }
+        while (!Input.GetKeyDown(KeyCode.Return) && !Input.GetKeyDown(KeyCode.Space) && !Input.GetMouseButtonDown(0)) { SFXManager.Instancia.ReproducirSonido2D("ClicBTN"); yield return null; }
         yield return TransicionFadeo(CGEsaNoEsLaClave, 0f);
         EsperandoInput = false;
         PITerminado = false;
+    }
+    //PANTALLA DE OPCIONES PARA QUE SI EL USUARIO NO QUIERE INICIAR EL PI, VUELVA AL MUNDO
+    private IEnumerator IniciarPuntoDeInflexionAhoraSi(){
+        EnPantallaOpcionesPI = false;
+        yield return TransicionFadeo(CGOpcionesPI, 0f);
+        EstaActivo = true;
+        CargarElementosPuntoInflexion();
+        CargarInventarioClaves();
+        ActualizarTexto();
+        yield return TransicionFadeo(CGPuntoInflexion, 1f);
+    }
+    private IEnumerator RegresarAlEscenario(){
+        EnPantallaOpcionesPI = false;
+        yield return TransicionFadeo(CGOpcionesPI, 0f);
+        yield return TransicionFadeo(CGHUD, 1f);
+        EnPuntoInflexion = false;
     }
 }

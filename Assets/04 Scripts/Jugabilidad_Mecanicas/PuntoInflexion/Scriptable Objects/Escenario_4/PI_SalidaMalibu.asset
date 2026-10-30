@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b16ccb6f8a3cf74458f161ee0bb1437b, type: 3}
+  m_Name: PI_SalidaMalibu
+  m_EditorClassIdentifier: Assembly-CSharp::OBJ_Script_PuntoInflexion
+  ImagenCap: {fileID: 21300000, guid: 414ee2f5e4a9e9e45b046621c009f47e, type: 3}
+  TXTCap: "Cap\xEDtulo 1"
+  TXTHistoria: "Gracias a su brillante intelecto y con ayuda del joven Juan, logra
+    entrar al Malibu y disfrutar de todo el glamor y esplendor.  Al entrar, ella
+    busca a Juan para hablar con \xE9l y disculparse por enga\xF1ar al guardia. \r\n\r\nLe
+    dice que todo est\xE1 bien y al menos la reservaci\xF3n que hizo va a servir
+    para algo. Mientras conversan, Marta comienza a sentir una extra\xF1a atracci\xF3n
+    hacia \xE9l. Decide darse la vuelta por el sal\xF3n y mientras explora reflexiona
+    acerca de todo lo que ha pasado y que tal vez, huir ahora es la mejor opci\xF3n.\r\n\r\nSe
+    acerca a la puerta y en voz baja dice \u201CYo <b>{0}</b> esta vida\u201D, quiero
+    ser mejor."
+  TXTResultadoPuntoInflexion:
+  - "Adi\xF3s Malibu."
+  - Yo rechazo esta vida, quiero ser mejor.
+  - Gracias por abrirme los ojos.
+  ProgresoHistoria: 20
+  ClaveCorrectaUso: {fileID: 11400000, guid: bb91367537c87de47b7656e69dc45d6f, type: 2}
+  VaACambiarDeEscena: 1
+  NombreEscenaCambiar: 01_FinalPuntuacion

@@ -3,7 +3,32 @@ guid: 228610ec91d50ec4ba7273b83ab15e5b
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cuernos
+    second: {fileID: 2100000, guid: 95a78ba1d5fc626439ef7d0807f709aa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cuerpo
+    second: {fileID: 2100000, guid: 4ce076d00a1dc814193bb435f8c95920, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dientes
+    second: {fileID: 2100000, guid: 520e426c8e893fb4ba79853eaac3733d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Encias
+    second: {fileID: 2100000, guid: 0c5903fda6e1afd4587920b7ae48aa06, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ojos
+    second: {fileID: 2100000, guid: 54d9ec56e0711464d8291bfe3dc20f56, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

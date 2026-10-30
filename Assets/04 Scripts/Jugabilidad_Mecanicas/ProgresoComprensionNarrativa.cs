@@ -27,11 +27,11 @@ public class ProgresoComprensionNarrativa : MonoBehaviour
 
 
     public void ProgresoCapituloCambio(float progreso){
-        Caprogreso = Mathf.Clamp(Caprogreso + progreso, 0f, 100f);
+        Caprogreso = Mathf.Clamp(Caprogreso + progreso, 0f, 110f);
         CambioEnProgreso?.Invoke(Caprogreso);
     }
     public void ComprensionCapituloCambio(float comprension){
-        CapComprension = Mathf.Clamp(CapComprension + comprension, 0f, 100f);
+        CapComprension = Mathf.Clamp(CapComprension + comprension, 0f, 110f);
         CambioEnComprension?.Invoke(CapComprension);
     }
 

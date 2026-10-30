@@ -19,8 +19,8 @@ public class Manejador_Cinematicas : MonoBehaviour
     [SerializeField] private Animator AnimatorPersonaje;
     private Coroutine CRMovimientoActual;
     private void Awake(){
-        if (PNegro != null) { GameObject PantallaNegra = GameObject.Find("PantallaNegro"); if (PantallaNegra != null) { PNegro = PantallaNegra.GetComponent<CanvasGroup>(); } }
-        if (PHUD != null) { GameObject PantallaHUD = GameObject.Find("HUD"); if (PantallaHUD != null) { PHUD = PantallaHUD.GetComponent<CanvasGroup>(); } }
+        if (PNegro == null) { GameObject PantallaNegra = GameObject.Find("PantallaNegro"); if (PantallaNegra != null) { PNegro = PantallaNegra.GetComponent<CanvasGroup>(); } }
+        if (PHUD == null) { GameObject PantallaHUD = GameObject.Find("HUD"); if (PantallaHUD != null) { PHUD = PantallaHUD.GetComponent<CanvasGroup>(); } }
     }
     private void Start(){ StartCoroutine(SecuenciaCinematicaWAOS()); }
     private IEnumerator SecuenciaCinematicaWAOS(){
@@ -56,6 +56,7 @@ public class Manejador_Cinematicas : MonoBehaviour
         yield return FadeoSincronizado(1f, 0f, 0f, 1f);
         EnCinematica = false;
         gameObject.SetActive(false);
+        if(UI_Tutorial.TutorialInstancia != null) { UI_Tutorial.TutorialInstancia.MostrarTutorial(); }
     }
     private void CambiarPrioridadCam(CinemachineCamera CamaraActiva){
         if (CAMGameplay != null) CAMGameplay.Priority = 0;

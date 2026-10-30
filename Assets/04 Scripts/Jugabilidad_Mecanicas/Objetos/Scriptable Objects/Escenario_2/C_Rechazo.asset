@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clave_DATA
   IDClave: 4
   NombreClave: rechazo
-  IconoClave: {fileID: 21300000, guid: 15d93ed2d4a7f4f44b142bbdd80e9bdd, type: 3}
+  IconoClave: {fileID: 21300000, guid: 66c05ac29a7f16146abce91e53c85554, type: 3}
   PuntosComprension: 20
   descripcion: "\xBFRechazo? \xBFEsa es la raz\xF3n por la que hago esto? \xBFO algo
     m\xE1s?"

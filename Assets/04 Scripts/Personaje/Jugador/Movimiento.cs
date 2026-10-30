@@ -25,7 +25,7 @@ public class Movimiento : MonoBehaviour
     }
 
     void Update(){
-        if ((ManejadorDialogos.Instancia != null && ManejadorDialogos.Instancia.DialogoActivo) || (Evento_PuntoInflexion.InstanciaPuntoInflexion != null && Evento_PuntoInflexion.InstanciaPuntoInflexion.EstaActivo)) {
+        if ((ManejadorDialogos.Instancia != null && ManejadorDialogos.Instancia.DialogoActivo) || (Evento_PuntoInflexion.InstanciaPuntoInflexion != null && Evento_PuntoInflexion.InstanciaPuntoInflexion.EstaActivo) || UI_Claves.MostrandoClave || UI_Tutorial.TutorialActivo || Evento_PuntoInflexion.EnPuntoInflexion) {
             AnimacionIdle();
             return; 
         } else if(Manejador_Cinematicas.EnCinematica) { return; }

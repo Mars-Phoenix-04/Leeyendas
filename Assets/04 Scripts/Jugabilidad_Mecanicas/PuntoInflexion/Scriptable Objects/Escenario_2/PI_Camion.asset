@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b16ccb6f8a3cf74458f161ee0bb1437b, type: 3}
   m_Name: PI_Camion
   m_EditorClassIdentifier: Assembly-CSharp::OBJ_Script_PuntoInflexion
-  ImagenCap: {fileID: 0}
+  ImagenCap: {fileID: 21300000, guid: 414ee2f5e4a9e9e45b046621c009f47e, type: 3}
   TXTCap: "Cap\xEDtulo 1"
   TXTHistoria: "Libre de su prisi\xF3n, Marta inicia su aventura hacia el sal\xF3n
     de baile. En su camino se topa con varios de sus vecinos y explora su vecindad
@@ -28,8 +28,8 @@ MonoBehaviour:
     qu\xE9 asco."
   - "Esto est\xE1 saliendo mejor de lo que pens\xE9."
   - Solo espero que las vecinas chismosas no le digan nada a mis padres.
-  - Solo espero que las vecinas chismosas no le digan nada a mis padres.
-  ProgresoHistoria: 10
+  - Siguiente parada, Malibu.
+  ProgresoHistoria: 25
   ClaveCorrectaUso: {fileID: 11400000, guid: 8bf295baa2f221746b0de76e805026b7, type: 2}
   VaACambiarDeEscena: 1
   NombreEscenaCambiar: 01_ACT2_SanLorenzo

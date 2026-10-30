@@ -25,7 +25,7 @@ public class ManejadorDialogos : MonoBehaviour
 
     void Update(){
         if (!EstaDialogando) return;
-        if(Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))   EscribirTXT();
+        if(Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)) { /*SFXManager.Instancia.ReproducirSonido2D("ClicBTN");*/ EscribirTXT(); }
     }
     private void Awake(){
         if (Instancia == null) { Instancia = this; DontDestroyOnLoad(gameObject); } else if (Instancia != this) { Destroy(gameObject); }
@@ -42,6 +42,7 @@ public class ManejadorDialogos : MonoBehaviour
 
         if (TXTituloTexto != null && TitulosDialogo != null && TitulosDialogo.Length > 0) TXTituloTexto.text = TituloDD[IndiceTXTActual];
         TXTDD.text = DialogoDescripcion[IndiceTXTActual];
+        if(SFXManager.Instancia != null) { SFXManager.Instancia.ReproducirSonido2D("Dialogos"); }
         InicioDialogo?.Invoke();
         StopAllCoroutines();
 

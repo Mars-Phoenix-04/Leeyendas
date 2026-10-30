@@ -89,7 +89,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineThirdPersonFollow
   Damping: {x: 5, y: 10, z: 1}
-  ShoulderOffset: {x: 0.11, y: -1.08, z: -4.35}
+  ShoulderOffset: {x: -1.49, y: -1.08, z: -4.35}
   VerticalArmLength: 1
   CameraSide: 0
   CameraDistance: 3

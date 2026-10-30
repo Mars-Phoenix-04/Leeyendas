@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clave_DATA
   IDClave: 2
   NombreClave: puerta
-  IconoClave: {fileID: 21300000, guid: 15d93ed2d4a7f4f44b142bbdd80e9bdd, type: 3}
-  PuntosComprension: 10
+  IconoClave: {fileID: 21300000, guid: f5a2f36cf9e451e4abb346f7a31f8981, type: 3}
+  PuntosComprension: 20
   descripcion: "Mi mayor obst\xE1culo hasta ahora, esta es la barrera que me separa
     del mundo exterior. "
